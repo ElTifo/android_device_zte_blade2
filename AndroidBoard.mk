@@ -18,8 +18,13 @@ LOCAL_PATH := device/zte/blade2/prebuilt
 # Kernel
 #
 
-TARGET_PREBUILT_KERNEL := device/zte/blade2/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
 
-ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
-$(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
+file := $(INSTALLED_KERNEL_TARGET)
+ALL_PREBUILT += $(file)
+$(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
+
+
+
+
