@@ -1,4 +1,5 @@
-Work in progress CyanogenMod 7 device config for the ZTE Crescent/Blade2
+Work in progress CyanogenMod 7 device configuration for the ZTE Crescent / Blade S, marketed as Orange San Francisco II and T-Mobile Vivacity.
 
-Mostly working thanks to HCDRJacob
-Uses parts of the ZTE Blade config with thanks to HCDRJacob and Tom_G
+Thanks to flibblesan as I practically lifted this entire thing and hacked up Wi-Fi.
+Mostly working thanks to HCDRJacob.
+Uses parts of the ZTE Blade configuration with thanks to HCDRJacob and Tom_G.
