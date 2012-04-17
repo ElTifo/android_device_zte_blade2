@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
     device/zte/blade2/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     device/zte/blade2/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     device/zte/blade2/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
-    device/zte/blade2/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/egl.cfg
+    device/zte/blade2/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
