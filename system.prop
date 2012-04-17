@@ -15,3 +15,15 @@ ro.sf.hwrotation=180
 wifi.interface=wlan0
 ro.compcache.default=0
 persist.sys.use_16bpp_alpha=1
+
+# begin EGL Update props
+debug.sf.hw=1
+debug.composition.type=gpu
+debug.performance.tuning=1
+video.accelerate.hw=1
+dalvik.vm.verify-bytecode=false
+dalvik.vm.dexopt-flags=m=v,o=y
+dalvik.vm.dexopt-data-only=1
+persist.android.strictmode=0
+ro.min_pointer_dur=1
+# end EGL Update props

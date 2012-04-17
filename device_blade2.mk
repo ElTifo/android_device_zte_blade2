@@ -84,6 +84,15 @@ PRODUCT_COPY_FILES += \
     device/zte/blade2/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     device/zte/blade2/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
 
+# EGL
+PRODUCT_COPY_FILES += \
+    device/zte/blade2/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
+    device/zte/blade2/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
+    device/zte/blade2/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
+    device/zte/blade2/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
+    device/zte/blade2/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+    device/zte/blade2/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/egl.cfg
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
