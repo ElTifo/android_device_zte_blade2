@@ -45,8 +45,9 @@ BOARD_FORCE_STATIC_A2DP := true
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=blade2 console=null
 
-BOARD_HAVE_FM_RADIO := false
-#BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
+BOARD_HAVE_FM_RADIO := true
+BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
+BOARD_FM_DEVICE := bcm4329
 
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := WEXT
@@ -56,7 +57,7 @@ BOARD_WLAN_DEVICE := bcm4330
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/dhd.ko"
 WIFI_DRIVER_FW_PATH_AP := "/system/etc/fw_4330b1.bin"
 WIFI_DRIVER_FW_PATH_STA := "/system/etc/fw_4330_b1_apsta.bin"
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4330b1.bin nvram_path=/system/etc/nv_4330b1.txt iface_name=wlan0"
+WIFI_DRIVER_MODULE_ARG := "firmware_path=/system/etc/fw_4330b1.bin nvram_path=/system/etc/nv_4330b1.txt iface_name=wlan"
 WIFI_DRIVER_MODULE_NAME := "dhd"
 
 WITH_JIT := true

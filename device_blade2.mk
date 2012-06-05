@@ -47,9 +47,12 @@ PRODUCT_PACKAGES += \
     copybit.blade2 \
     gralloc.blade2 \
     lights.blade2 \
+    sensors.blade2 \
     libOmxVidEnc \
     FM \
     abtfilt \
+    CrescentParts \
+    prox_cal \
     dexpreopt
 
 # proprietary side of the device
