@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # WLAN + BT + FM
 PRODUCT_COPY_FILES += \
-    device/zte/blade2/prebuilt/etc/init.bt.sh:system/etc/init.bt.sh \
+    device/zte/blade2/prebuilt/etc/init.bt.sh:system/etc/init.qcom.bt.sh \
     device/zte/blade2/prebuilt/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/zte/blade2/prebuilt/etc/init.wlanprop.sh:system/etc/init.wlanprop.sh \
     device/zte/blade2/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -89,11 +89,6 @@ PRODUCT_COPY_FILES += \
 
 # EGL
 PRODUCT_COPY_FILES += \
-    device/zte/blade2/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
-    device/zte/blade2/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
-    device/zte/blade2/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
-    device/zte/blade2/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/zte/blade2/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
     device/zte/blade2/prebuilt/lib/egl/egl.cfg:system/lib/egl/egl.cfg
 
 # Install the features available on this device.
@@ -129,7 +124,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.dec.jpeg.memcap=10000000
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.baseband_version=P736EB01 \
+    ro.build.baseband_version=P736VB01 \
     wifi.supplicant_scan_interval=60 \
     ro.com.android.dataroaming=false
 

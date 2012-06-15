@@ -101,6 +101,13 @@ on property:init.svc.wpa_supplicant=stopped
     stop dhcpcd
     stop dhcpcd_wlan0
 
+# Necessary to have functional Bluetooth with Wi-Fi disabled.
+on property:init.svc.hciattach=running
+    write /sys/class/rfkill/rfkill1/state 1
+
+on property:init.svc.hciattach=stopped
+    write /sys/class/rfkill/rfkill1/state 0
+
 on property:init.svc.bluetoothd=running
     write /sys/devices/virtual/bluetooth/hci0/idle_timeout 7000
     start btwlancoex
@@ -121,7 +128,7 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmc
 on property:ro.emmc=1
     start rmt_storage
 
-service hciattach /system/bin/hciattach -n -s 115200 /dev/ttyHS0 bcm2035 
+service hciattach /system/bin/sh /system/etc/init.qcom.bt.sh
     user bluetooth
     group qcom_oncrpc bluetooth net_bt_admin system
     disabled
@@ -279,18 +286,6 @@ on property:persist.sys.ztelog.enable=1
 
 on property:persist.sys.ztelog.enable=0
     stop getlog
-
-service btld /system/bin/logwrapper /system/bin/btld -lpm 1 -hb 3000000
-    user root
-    group bluetooth net_bt_admin
-    disabled
-    oneshot
-
-on property:service.brcm.bt.soft_onoff=1
-    start btld
-
-on property:service.brcm.bt.soft_onoff=0
-    stop btld
 
 # Hack for sh files in /etc
     chmod 7777 /system/etc/*.sh
