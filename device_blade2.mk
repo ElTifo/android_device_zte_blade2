@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # WLAN + BT + FM
 PRODUCT_COPY_FILES += \
-    device/zte/blade2/prebuilt/etc/init.bt.sh:system/etc/init.qcom.bt.sh \
+    device/zte/blade2/prebuilt/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/zte/blade2/prebuilt/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/zte/blade2/prebuilt/etc/init.wlanprop.sh:system/etc/init.wlanprop.sh \
     device/zte/blade2/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
