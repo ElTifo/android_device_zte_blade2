@@ -41,6 +41,7 @@
 /dev/oncrpc/*             0666   root       qcom_oncrpc
 /dev/adsp/*               0660   system     audio
 /dev/snd/*                0660   system     audio
+/dev/si4708               0777   root       root
 /dev/mt9t013              0660   system     system
 /dev/msm_camera/*         0660   system     system
 /dev/akm8976_daemon       0640   compass    system
