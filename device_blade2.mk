@@ -30,7 +30,7 @@ DEVICE_PACKAGE_OVERLAYS := device/zte/blade2/overlay
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := zte_blade2
 PRODUCT_DEVICE := blade2
-PRODUCT_MODEL := ZTE Crescent
+PRODUCT_MODEL := Crescent
 
 PRODUCT_PACKAGES += \
     LiveWallpapers \
@@ -78,12 +78,12 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/zte/blade2/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
-	device/zte/blade2/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
-	device/zte/blade2/prebuilt/etc/AudioFilter.csv:system/etc/AudioFilter.csv
+    device/zte/blade2/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
+    device/zte/blade2/prebuilt/etc/AudioFilter.csv:system/etc/AudioFilter.csv
 
 # WLAN + BT + FM
 PRODUCT_COPY_FILES += \
-    device/zte/blade2/prebuilt/etc/init.bt.sh:system/etc/init.bt.sh \
+    device/zte/blade2/prebuilt/etc/init.qcom.bt.sh:system/etc/init.qcom.bt.sh \
     device/zte/blade2/prebuilt/etc/init.qcom.fm.sh:system/etc/init.qcom.fm.sh \
     device/zte/blade2/prebuilt/etc/init.wlanprop.sh:system/etc/init.wlanprop.sh \
     device/zte/blade2/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
