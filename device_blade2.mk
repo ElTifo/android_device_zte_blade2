@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     device/zte/blade2/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
-    device/zte/blade2/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml \
     device/zte/blade2/prebuilt/etc/AudioFilter.csv:system/etc/AudioFilter.csv
 
 # WLAN + BT + FM
