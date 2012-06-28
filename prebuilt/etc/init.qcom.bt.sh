@@ -33,6 +33,8 @@
 #
 # 2) in start_hci_attach() - use BCM sleep switch instead of default bluetooth sleep switch to make
 #    BT release wake lock on suspend
+#
+# Merrily copy and pasted for ZTE Crescent by Dazzozo for ICS and Gingerbread!
 #    
 
 # DEFAULT BT sleep switch
