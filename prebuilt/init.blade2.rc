@@ -58,7 +58,7 @@ on boot
    
     chmod 0777 /dev/akm8962_aot
     chmod 0777 /dev/akm8962_dev
-	chmod 0777 /dev/si4708
+    chmod 0777 /dev/si4708
     mkdir /data/misc/prox 0777 radio radio   
     chmod 0777  /dev/taos
 
