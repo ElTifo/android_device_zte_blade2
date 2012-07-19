@@ -1,0 +1,5 @@
+#
+# system.prop for blade2
+#
+
+ro.cwm.enable_key_repeat=true
