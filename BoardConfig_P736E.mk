@@ -1,0 +1,51 @@
+USE_CAMERA_STUB := true
+
+# CPU
+TARGET_ARCH := arm
+TARGET_CPU_ABI := armeabi
+TARGET_CPU_ABI2 := armeabi-v6l
+TARGET_CPU_VARIANT := arm11
+TARGET_ARCH_VARIANT := armv6-vfp
+
+# inherit from the proprietary version
+-include vendor/zte/blade2/BoardConfigVendor.mk
+
+TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_PLATFORM := unknown
+TARGET_BOOTLOADER_BOARD_NAME := blade2
+
+BOARD_KERNEL_CMDLINE := 
+BOARD_KERNEL_BASE := 0x02600000
+BOARD_PAGE_SIZE := 0x00000800
+BOARD_KERNEL_PAGESIZE := 2048
+
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x00400000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x00600000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0dc00000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x0a280000
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+BOARD_DATA_DEVICE := /dev/block/mtdblock6
+BOARD_DATA_FILESYSTEM := auto
+BOARD_DATA_FILESYSTEM_OPTIONS := rw
+BOARD_SYSTEM_DEVICE := /dev/block/mtdblock5
+BOARD_SYSTEM_FILESYSTEM := auto
+BOARD_SYSTEM_FILESYSTEM_OPTIONS := rw
+BOARD_CACHE_DEVICE := /dev/block/mtdblock4
+BOARD_CACHE_FILESYSTEM := auto
+BOARD_CACHE_FILESYSTEM_OPTIONS := rw
+
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun
+BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+
+TARGET_PREBUILT_KERNEL := device/zte/blade2/kernel
+
+BOARD_CUSTOM_GRAPHICS:= ../../../device/zte/blade2/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/blade2/recovery_ui.c
+TARGET_RECOVERY_INITRC := device/zte/blade2/recovery.rc
+
+BOARD_HAS_FLIPPED_SCREEN := true
+
+# Enable go back option on CWM menus
+
+BOARD_HAS_NO_SELECT_BUTTON := true
